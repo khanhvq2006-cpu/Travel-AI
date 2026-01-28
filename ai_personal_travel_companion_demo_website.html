@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>AI Personal Travel Companion</title>
+  <style>
+    body { font-family: Arial, sans-serif; margin: 0; background: #f5f7fa; color: #333; }
+    header { background: linear-gradient(135deg, #1e90ff, #00c6ff); color: #fff; padding: 40px 20px; text-align: center; }
+    section { padding: 40px 20px; max-width: 1000px; margin: auto; }
+    .features { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 20px; }
+    .card { background: #fff; padding: 20px; border-radius: 12px; box-shadow: 0 4px 12px rgba(0,0,0,0.08); }
+    .chatbox { background: #fff; border-radius: 12px; padding: 20px; box-shadow: 0 4px 12px rgba(0,0,0,0.08); }
+    .chatlog { height: 200px; overflow-y: auto; border: 1px solid #ddd; padding: 10px; margin-bottom: 10px; }
+    input, button { padding: 10px; border-radius: 8px; border: 1px solid #ccc; }
+    button { background: #1e90ff; color: #fff; cursor: pointer; }
+    footer { background: #222; color: #ccc; text-align: center; padding: 20px; }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>AI Personal Travel Companion</h1>
+    <p>Trợ lý du lịch cá nhân hoá – theo bạn suốt hành trình</p>
+  </header>
+
+  <section>
+    <h2>Vấn đề</h2>
+    <p>Du khách thiếu cá nhân hoá, lịch trình cứng nhắc, không có hỗ trợ thời gian thực khi phát sinh sự cố.</p>
+  </section>
+
+  <section>
+    <h2>Giải pháp của chúng tôi</h2>
+    <div class="features">
+      <div class="card">AI hiểu sở thích và hành vi từng du khách</div>
+      <div class="card">Điều chỉnh lịch trình theo thời gian thực</div>
+      <div class="card">Kết nối dịch vụ địa phương</div>
+      <div class="card">Thay thế HDV cơ bản bằng công nghệ</div>
+    </div>
+  </section>
+
+  <section>
+    <h2>Demo Trợ lý AI (mô phỏng)</h2>
+    <div class="chatbox">
+      <div class="chatlog" id="chatlog">AI: Chào bạn, bạn muốn đi du lịch ở đâu?</div>
+      <input type="text" id="userInput" placeholder="Nhập câu hỏi..." />
+      <button onclick="sendMessage()">Gửi</button>
+    </div>
+  </section>
+
+  <section>
+    <h2>Mô hình kinh doanh</h2>
+    <ul>
+      <li>Gói cá nhân hoá cho du khách (subscription)</li>
+      <li>Bán nền tảng cho công ty lữ hành (B2B)</li>
+      <li>Hoa hồng từ dịch vụ địa phương</li>
+    </ul>
+  </section>
+
+  <footer>
+    <p>Startup Demo – Phục vụ cuộc thi ý tưởng khởi nghiệp du lịch</p>
+  </footer>
+
+  <script>
+    function sendMessage() {
+      const input = document.getElementById('userInput');
+      const chatlog = document.getElementById('chatlog');
+      if (!input.value) return;
+      chatlog.innerHTML += '<br> Bạn: ' + input.value;
+      chatlog.innerHTML += '<br> AI: Mình đã ghi nhận, mình sẽ cá nhân hoá lịch trình cho bạn.';
+      input.value = '';
+      chatlog.scrollTop = chatlog.scrollHeight;
+    }
+  </script>
+</body>
+</html>
